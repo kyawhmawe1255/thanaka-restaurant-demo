@@ -363,6 +363,30 @@ p {
   display: none;
 }
 
+.menu-group[data-category="bowls"] {
+  order: 1;
+}
+
+.menu-group[data-category="drinks"] {
+  order: 2;
+}
+
+.menu-group[data-category="brunch"] {
+  order: 3;
+}
+
+.menu-group[data-category="appetizer"] {
+  order: 4;
+}
+
+.menu-group[data-category="main"] {
+  order: 5;
+}
+
+.menu-group[data-category="dessert"] {
+  order: 6;
+}
+
 .menu-group h3 {
   grid-column: 1 / -1;
   margin: 0;
@@ -754,15 +778,14 @@ footer {
     position: sticky;
     top: 70px;
     z-index: 10;
-    grid-template-columns: repeat(5, max-content);
-    overflow-x: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     padding: 10px 0;
     background: var(--paper);
   }
 
   .tab {
-    width: auto;
-    min-width: 92px;
+    width: 100%;
+    min-width: 0;
     gap: 10px;
   }
 
@@ -880,6 +903,8 @@ footer {
 
   .menu-side {
     top: 66px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
   }
 
   .menu-item p {
