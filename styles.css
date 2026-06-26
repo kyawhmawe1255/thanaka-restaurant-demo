@@ -397,6 +397,18 @@ p {
   border: 1px dashed rgba(23, 23, 19, 0.18);
 }
 
+.menu-row.has-image::before {
+  display: none;
+}
+
+.menu-thumb {
+  grid-column: 1 / -1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(23, 23, 19, 0.08);
+}
+
 .menu-row strong {
   display: block;
   margin-bottom: 4px;
