@@ -692,12 +692,6 @@ p {
   background: white;
 }
 
-.visit-button.primary-visit {
-  color: white;
-  border-color: var(--ink);
-  background: var(--ink);
-}
-
 .visit-button span,
 .visit-note span {
   color: var(--rust);
@@ -705,10 +699,6 @@ p {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.visit-button.primary-visit span {
-  color: var(--gold);
 }
 
 .visit-button strong,
