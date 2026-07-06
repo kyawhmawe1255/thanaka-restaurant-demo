@@ -1762,6 +1762,14 @@ h1 {
   background: var(--teak);
 }
 
+.gallery-section .section-title h2 {
+  color: #fff7e9;
+}
+
+.gallery-section .kicker {
+  color: #ffd9a3;
+}
+
 .story-section {
   background:
     linear-gradient(90deg, rgba(251, 240, 213, 0.98), rgba(251, 240, 213, 0.9)),
@@ -1836,13 +1844,19 @@ h1 {
   }
 
   .hero-bg {
+    top: auto;
     width: 100%;
-    opacity: 0.22;
+    height: 58%;
+    opacity: 0.34;
+    object-position: 64% bottom;
     border-left: 0;
+    filter: sepia(0.28) saturate(0.78) contrast(0.92);
   }
 
   .hero-shade {
-    background: linear-gradient(90deg, rgba(251, 240, 213, 0.96), rgba(251, 240, 213, 0.78));
+    background:
+      linear-gradient(180deg, rgba(251, 240, 213, 0.98) 0 48%, rgba(251, 240, 213, 0.84) 74%, rgba(251, 240, 213, 0.58) 100%),
+      linear-gradient(90deg, rgba(251, 240, 213, 0.98), rgba(251, 240, 213, 0.66));
   }
 
   .menu-layout {
