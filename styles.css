@@ -930,8 +930,8 @@ p {
 
 .atmosphere-copy article {
   display: grid;
-  place-items: center;
-  min-height: 120px;
+  align-content: start;
+  gap: 8px;
   padding: 22px;
   border: 1px solid var(--line);
   background:
@@ -941,9 +941,7 @@ p {
 
 .atmosphere-copy span {
   color: var(--lacquer);
-  font-size: clamp(2rem, 4vw, 3.4rem);
   font-weight: 900;
-  line-height: 1;
 }
 
 .atmosphere-copy strong {
