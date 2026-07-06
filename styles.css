@@ -531,6 +531,20 @@ p {
   margin-top: 9px;
 }
 
+.row-action {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 5px 9px;
+  border: 1px solid rgba(139, 23, 48, 0.24);
+  color: var(--lacquer);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .row-proteins span {
   padding: 4px 7px;
   font-size: 0.62rem;
@@ -1722,6 +1736,10 @@ h1 {
 .row-proteins span,
 .dialog-proteins span {
   background: rgba(251, 240, 213, 0.84);
+}
+
+.row-action {
+  background: rgba(251, 240, 213, 0.72);
 }
 
 .harmony-card {

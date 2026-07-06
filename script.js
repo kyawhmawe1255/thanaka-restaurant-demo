@@ -125,6 +125,11 @@ rows.forEach((row) => {
     thumb.loading = "lazy";
     row.prepend(thumb);
     row.classList.add("has-image");
+
+    const action = document.createElement("span");
+    action.className = "row-action";
+    action.textContent = "See dish";
+    row.querySelector("div")?.append(action);
   }
 
   if (tags.length) {
