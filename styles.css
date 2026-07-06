@@ -24,11 +24,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    linear-gradient(90deg, rgba(139, 23, 48, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(139, 23, 48, 0.035) 1px, transparent 1px),
-    var(--cream);
-  background-size: 34px 34px;
+  background: var(--cream);
   color: var(--ink);
   font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -678,11 +674,7 @@ p {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-color: rgba(210, 166, 75, 0.5);
-  background:
-    linear-gradient(90deg, rgba(139, 23, 48, 0.06) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(139, 23, 48, 0.06) 1px, transparent 1px),
-    var(--paper);
-  background-size: 24px 24px;
+  background: var(--paper);
   box-shadow: var(--shadow);
 }
 
@@ -1427,8 +1419,7 @@ footer img {
 
 body {
   background:
-    radial-gradient(circle at 16% 8%, rgba(211, 163, 66, 0.18), transparent 30%),
-    linear-gradient(180deg, rgba(251, 240, 213, 0.72), rgba(234, 215, 182, 0.92)),
+    radial-gradient(circle at 16% 8%, rgba(211, 163, 66, 0.2), transparent 30%),
     var(--cream);
   overflow-x: hidden;
 }
@@ -1602,10 +1593,7 @@ h1 {
 }
 
 .menu-section {
-  background:
-    radial-gradient(circle at 86% 10%, rgba(211, 163, 66, 0.16), transparent 26%),
-    linear-gradient(180deg, rgba(251, 240, 213, 0.98), rgba(246, 229, 196, 0.96)),
-    var(--paper);
+  background: var(--paper);
 }
 
 .menu-layout {
