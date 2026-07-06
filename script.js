@@ -116,6 +116,7 @@ rows.forEach((row) => {
   const title = row.querySelector("strong")?.textContent.trim();
   const image = menuImages[title];
   const tags = getTags(row);
+  const rowContent = row.querySelector("div");
 
   if (image && !row.classList.contains("no-thumb")) {
     const thumb = document.createElement("img");
@@ -131,7 +132,14 @@ rows.forEach((row) => {
     const tagList = document.createElement("div");
     tagList.className = "row-proteins";
     tagList.innerHTML = tags.map((tag) => `<span>${tag}</span>`).join("");
-    row.querySelector("div")?.append(tagList);
+    rowContent?.append(tagList);
+  }
+
+  if (image && !row.classList.contains("no-thumb")) {
+    const action = document.createElement("span");
+    action.className = "row-action";
+    action.textContent = "See dish";
+    rowContent?.append(action);
   }
 });
 

@@ -24,11 +24,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    linear-gradient(90deg, rgba(139, 23, 48, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(139, 23, 48, 0.035) 1px, transparent 1px),
-    var(--cream);
-  background-size: 34px 34px;
+  background: var(--cream);
   color: var(--ink);
   font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -535,6 +531,20 @@ p {
   margin-top: 9px;
 }
 
+.row-action {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 5px 9px;
+  border: 1px solid rgba(139, 23, 48, 0.24);
+  color: var(--lacquer);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .row-proteins span {
   padding: 4px 7px;
   font-size: 0.62rem;
@@ -678,11 +688,7 @@ p {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-color: rgba(210, 166, 75, 0.5);
-  background:
-    linear-gradient(90deg, rgba(139, 23, 48, 0.06) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(139, 23, 48, 0.06) 1px, transparent 1px),
-    var(--paper);
-  background-size: 24px 24px;
+  background: var(--paper);
   box-shadow: var(--shadow);
 }
 
@@ -1406,5 +1412,500 @@ footer img {
 
   .mobile-bar {
     display: grid;
+  }
+}
+
+/* Local Dishoom-inspired Thanaka concept */
+:root {
+  --ink: #26120c;
+  --soft-ink: #4b2d20;
+  --cream: #ead7b6;
+  --paper: #fbf0d5;
+  --line: rgba(79, 32, 18, 0.24);
+  --leaf: #273f31;
+  --gold: #d3a342;
+  --rust: #9a3427;
+  --lacquer: #6c1022;
+  --teak: #35190f;
+  --muted: #7a604b;
+  --shadow: 0 28px 80px rgba(38, 18, 12, 0.24);
+}
+
+body {
+  background:
+    radial-gradient(circle at 16% 8%, rgba(211, 163, 66, 0.2), transparent 30%),
+    var(--cream);
+  overflow-x: hidden;
+}
+
+.site-header {
+  padding: 14px clamp(18px, 4vw, 52px);
+  color: var(--paper);
+  background:
+    linear-gradient(90deg, rgba(211, 163, 66, 0.12), transparent 38%),
+    var(--teak);
+  border-bottom: 3px double rgba(211, 163, 66, 0.5);
+  backdrop-filter: none;
+}
+
+.site-header::before {
+  display: none;
+}
+
+.brand img {
+  border-radius: 0;
+  border-color: rgba(211, 163, 66, 0.7);
+}
+
+.brand strong {
+  color: #fff5dc;
+  font-size: 2.1rem;
+  letter-spacing: 0.02em;
+}
+
+nav {
+  border: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+
+nav a {
+  color: rgba(255, 245, 220, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.header-cta,
+.button.light {
+  color: var(--paper);
+  background: var(--lacquer);
+}
+
+.hero {
+  min-height: 92svh;
+  align-items: center;
+  padding: 130px clamp(18px, 5vw, 72px) 74px;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(251, 240, 213, 0.98) 0 55%, rgba(251, 240, 213, 0.15) 76%),
+    var(--paper);
+}
+
+.hero-bg {
+  left: auto;
+  right: 0;
+  width: min(48vw, 740px);
+  height: 100%;
+  opacity: 0.92;
+  object-position: center;
+  transform: none;
+  border-left: 1px solid rgba(79, 32, 18, 0.28);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(251, 240, 213, 0.98) 0 52%, rgba(251, 240, 213, 0.28) 76%, rgba(38, 18, 12, 0.38)),
+    linear-gradient(180deg, rgba(38, 18, 12, 0.06), rgba(38, 18, 12, 0.24));
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.kicker {
+  color: var(--lacquer);
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  color: var(--ink);
+  max-width: 760px;
+  font-size: clamp(5.2rem, 13vw, 12.5rem);
+  line-height: 0.82;
+}
+
+.hero-content p:not(.kicker) {
+  max-width: 610px;
+  color: var(--soft-ink);
+  font-size: clamp(1.05rem, 1.6vw, 1.34rem);
+}
+
+.button {
+  min-height: 48px;
+  border: 1px solid var(--lacquer);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+}
+
+.button.ghost {
+  color: var(--lacquer);
+  border-color: rgba(108, 16, 34, 0.42);
+  background: rgba(251, 240, 213, 0.6);
+  backdrop-filter: none;
+}
+
+.hero-card {
+  right: clamp(18px, 5vw, 72px);
+  bottom: clamp(26px, 7vw, 92px);
+  width: min(250px, 22vw);
+  border: 1px solid rgba(211, 163, 66, 0.82);
+  background: var(--paper);
+  transform: rotate(-1.2deg);
+}
+
+.hero-card div {
+  border-top: 1px solid var(--line);
+}
+
+.quick-actions {
+  color: var(--ink);
+  background:
+    linear-gradient(135deg, rgba(108, 16, 34, 0.08), transparent 35%),
+    var(--paper);
+  border-block: 3px double var(--line);
+}
+
+.quick-actions a {
+  min-height: 154px;
+  border-right: 1px solid var(--line);
+}
+
+.quick-actions span {
+  color: var(--lacquer);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.65rem;
+}
+
+.quick-actions strong {
+  max-width: 320px;
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.02;
+}
+
+.quick-actions small {
+  max-width: 360px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.section {
+  padding: clamp(72px, 9vw, 132px) clamp(18px, 5vw, 72px);
+}
+
+.section-title {
+  max-width: 980px;
+  margin-bottom: 44px;
+}
+
+.section-title h2,
+.story-intro h2 {
+  color: var(--ink);
+}
+
+.menu-section {
+  background: var(--paper);
+}
+
+.menu-layout {
+  grid-template-columns: minmax(210px, 0.24fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 54px);
+}
+
+.menu-side {
+  top: 96px;
+  gap: 0;
+  border: 1px solid var(--line);
+  background: rgba(251, 240, 213, 0.74);
+}
+
+.tab {
+  min-height: 54px;
+  justify-content: flex-start;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--soft-ink);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.74rem;
+}
+
+.tab:last-child {
+  border-bottom: 0;
+}
+
+.tab.active {
+  color: var(--paper);
+  background: var(--lacquer);
+}
+
+.tab.active::after {
+  margin-left: auto;
+}
+
+.menu-board {
+  gap: 42px;
+}
+
+.menu-group {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid var(--line);
+  background: rgba(251, 240, 213, 0.72);
+}
+
+.menu-group[data-category="salad"] {
+  order: 1;
+}
+
+.menu-group[data-category="soup"] {
+  order: 2;
+}
+
+.menu-group[data-category="curry"] {
+  order: 3;
+}
+
+.menu-group[data-category="wok-tossed"] {
+  order: 4;
+}
+
+.menu-group[data-category="sets"] {
+  order: 5;
+}
+
+.menu-group[data-category="harmony"] {
+  order: 6;
+}
+
+.menu-group[data-category="drinks"] {
+  order: 7;
+}
+
+.menu-group h3 {
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+  color: var(--lacquer);
+  border-bottom: 3px double var(--line);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.45rem, 2.2vw, 2.25rem);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.menu-row {
+  min-height: 0;
+  padding: 15px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(79, 32, 18, 0.18);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-row:hover,
+.menu-row:focus-visible {
+  border-color: rgba(79, 32, 18, 0.18);
+  box-shadow: none;
+  transform: none;
+}
+
+.menu-row::before,
+.menu-thumb {
+  display: none;
+}
+
+.menu-row strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.14rem;
+}
+
+.menu-row p {
+  display: block;
+  overflow: visible;
+  color: var(--muted);
+  font-size: 0.88rem;
+  -webkit-line-clamp: unset;
+}
+
+.row-proteins span,
+.dialog-proteins span {
+  background: rgba(251, 240, 213, 0.84);
+}
+
+.row-action {
+  background: rgba(251, 240, 213, 0.72);
+}
+
+.harmony-card {
+  padding: clamp(28px, 5vw, 56px);
+  border: 3px double var(--line);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(211, 163, 66, 0.22), transparent 34%),
+    var(--paper);
+}
+
+.harmony-card h4 {
+  font-size: clamp(3.2rem, 7vw, 6.8rem);
+}
+
+.harmony-pricing {
+  max-width: 860px;
+}
+
+.gallery-section {
+  background: var(--teak);
+}
+
+.story-section {
+  background:
+    linear-gradient(90deg, rgba(251, 240, 213, 0.98), rgba(251, 240, 213, 0.9)),
+    var(--paper);
+  color: var(--ink);
+  border-block: 3px double var(--line);
+}
+
+.story-text {
+  color: var(--soft-ink);
+}
+
+.story-text p:first-child::first-letter {
+  float: left;
+  padding: 0 8px 0 0;
+  color: var(--lacquer);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4.8rem;
+  line-height: 0.82;
+}
+
+.atmosphere-section,
+.reviews-section {
+  background: var(--cream);
+}
+
+.atmosphere-layout {
+  gap: 18px;
+}
+
+.atmosphere-photo {
+  border: 3px double var(--line);
+}
+
+.atmosphere-copy article,
+.review-card,
+.rating-summary,
+.visit-button,
+.visit-note {
+  background: rgba(251, 240, 213, 0.76);
+  border: 1px solid var(--line);
+}
+
+.atmosphere-copy strong {
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.45rem;
+}
+
+.reviews-grid {
+  gap: 18px;
+}
+
+.review-card {
+  min-height: 0;
+}
+
+.visit-section {
+  background:
+    linear-gradient(135deg, rgba(211, 163, 66, 0.16), transparent 42%),
+    var(--paper);
+}
+
+.mobile-bar {
+  background: rgba(53, 25, 15, 0.95);
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: 84svh;
+    background: var(--paper);
+  }
+
+  .hero-bg {
+    width: 100%;
+    opacity: 0.22;
+    border-left: 0;
+  }
+
+  .hero-shade {
+    background: linear-gradient(90deg, rgba(251, 240, 213, 0.96), rgba(251, 240, 213, 0.78));
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-side {
+    top: 70px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border: 1px solid var(--line);
+  }
+
+  .tab {
+    justify-content: center;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .menu-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 118px 18px 78px;
+  }
+
+  h1 {
+    font-size: clamp(3.65rem, 20vw, 5.1rem);
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions a {
+    min-height: 122px;
+    border-right: 0;
+  }
+
+  .menu-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .menu-side,
+  .menu-board,
+  .menu-group {
+    max-width: calc(100vw - 36px);
+  }
+
+  .tab {
+    min-height: 48px;
+    padding: 0 8px;
+    font-size: 0.66rem;
+  }
+
+  .menu-group {
+    padding: 18px;
+  }
+
+  .harmony-card h4 {
+    font-size: clamp(2.8rem, 16vw, 4.4rem);
   }
 }
