@@ -1762,6 +1762,14 @@ h1 {
   background: var(--teak);
 }
 
+.gallery-section .section-title h2 {
+  color: #fff7e9;
+}
+
+.gallery-section .kicker {
+  color: #ffd9a3;
+}
+
 .story-section {
   background:
     linear-gradient(90deg, rgba(251, 240, 213, 0.98), rgba(251, 240, 213, 0.9)),
