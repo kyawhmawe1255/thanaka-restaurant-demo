@@ -1519,10 +1519,13 @@ nav a {
 }
 
 h1 {
-  color: var(--ink);
+  color: var(--lacquer);
   max-width: 760px;
   font-size: clamp(5.2rem, 13vw, 12.5rem);
   line-height: 0.82;
+  text-shadow:
+    0 2px 0 rgba(211, 163, 66, 0.18),
+    0 18px 44px rgba(53, 25, 15, 0.16);
 }
 
 .hero-content p:not(.kicker) {
