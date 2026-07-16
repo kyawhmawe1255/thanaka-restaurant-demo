@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=food-photo-hero">
+    <link rel="stylesheet" href="styles.css?v=mobile-nav">
   </head>
   <body>
     <header class="site-header">
@@ -33,7 +33,23 @@
         <a href="#visit">Visit</a>
       </nav>
       <a class="header-cta" href="#visit">Reserve</a>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <button class="mobile-menu-close" type="button" aria-label="Close menu">Close</button>
+        <a href="#menu">Menu</a>
+        <a href="#harmony">Harmony</a>
+        <a href="#atmosphere">Garden</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+        <a class="mobile-menu-reserve" href="#visit">Reserve</a>
+      </div>
+    </div>
 
     <main id="top">
       <section class="hero">
@@ -376,6 +392,6 @@
       <a href="#visit">Visit</a>
     </div>
 
-    <script src="script.js?v=food-photo-hero"></script>
+    <script src="script.js?v=mobile-nav"></script>
   </body>
 </html>

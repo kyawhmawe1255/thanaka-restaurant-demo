@@ -1,6 +1,43 @@
 const tabs = document.querySelectorAll(".tab");
 const groups = document.querySelectorAll(".menu-group");
 const rows = document.querySelectorAll(".menu-row");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const mobileMenuClose = document.querySelector(".mobile-menu-close");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+function closeMobileMenu() {
+  if (!mobileMenu || !mobileMenuToggle) return;
+  mobileMenu.classList.remove("is-open");
+  mobileMenu.setAttribute("aria-hidden", "true");
+  mobileMenuToggle.setAttribute("aria-expanded", "false");
+  mobileMenuToggle.setAttribute("aria-label", "Open menu");
+  document.body.classList.remove("mobile-nav-open");
+}
+
+function openMobileMenu() {
+  if (!mobileMenu || !mobileMenuToggle) return;
+  mobileMenu.classList.add("is-open");
+  mobileMenu.setAttribute("aria-hidden", "false");
+  mobileMenuToggle.setAttribute("aria-expanded", "true");
+  mobileMenuToggle.setAttribute("aria-label", "Close menu");
+  document.body.classList.add("mobile-nav-open");
+  mobileMenu.querySelector("a")?.focus();
+}
+
+mobileMenuToggle?.addEventListener("click", () => {
+  if (mobileMenu?.classList.contains("is-open")) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+});
+
+mobileMenuClose?.addEventListener("click", closeMobileMenu);
+mobileMenu?.addEventListener("click", (event) => {
+  if (event.target === mobileMenu) closeMobileMenu();
+});
+mobileMenuLinks.forEach((link) => link.addEventListener("click", closeMobileMenu));
 
 const menuImages = {
   "Rakhine Moke Ti": "tom-yum.png",
@@ -164,6 +201,9 @@ menuDialog.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && menuDialog.classList.contains("is-open")) {
     closeMenuDialog();
+  }
+  if (event.key === "Escape" && mobileMenu?.classList.contains("is-open")) {
+    closeMobileMenu();
   }
 });
 
