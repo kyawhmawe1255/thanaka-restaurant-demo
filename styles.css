@@ -1576,6 +1576,11 @@ h1 {
   stroke-linejoin: round;
 }
 
+.menu-book-icon svg {
+  fill: currentColor;
+  stroke: none;
+}
+
 .hero-card {
   right: clamp(18px, 5vw, 72px);
   bottom: clamp(26px, 7vw, 92px);
