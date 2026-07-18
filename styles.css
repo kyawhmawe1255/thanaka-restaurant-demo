@@ -1438,7 +1438,7 @@ footer img {
   --rust: #9a3427;
   --lacquer: #6c1022;
   --teak: #35190f;
-  --muted: #7a604b;
+  --muted: #604839;
   --shadow: 0 28px 80px rgba(38, 18, 12, 0.24);
 }
 
@@ -1636,16 +1636,17 @@ h1 {
 .quick-actions small {
   max-width: 360px;
   color: var(--muted);
+  font-size: 0.98rem;
   line-height: 1.45;
 }
 
 .section {
-  padding: clamp(72px, 9vw, 132px) clamp(18px, 5vw, 72px);
+  padding: clamp(54px, 7vw, 96px) clamp(18px, 5vw, 72px);
 }
 
 .section-title {
   max-width: 980px;
-  margin-bottom: 44px;
+  margin-bottom: 34px;
 }
 
 .section-title h2,
@@ -1696,7 +1697,7 @@ h1 {
 }
 
 .menu-board {
-  gap: 42px;
+  gap: 32px;
 }
 
 .menu-group {
@@ -1776,7 +1777,8 @@ h1 {
   display: block;
   overflow: visible;
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.96rem;
+  line-height: 1.42;
   -webkit-line-clamp: unset;
 }
 
@@ -1827,6 +1829,8 @@ h1 {
 
 .story-text {
   color: var(--soft-ink);
+  font-size: clamp(1.02rem, 1.3vw, 1.16rem);
+  line-height: 1.66;
 }
 
 .story-text p:first-child::first-letter {
@@ -2047,6 +2051,29 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .section-title {
+    margin-bottom: 26px;
+  }
+
+  .quick-actions a {
+    min-height: 104px;
+  }
+
+  .quick-actions small,
+  .menu-row p,
+  .story-text,
+  .atmosphere-copy p,
+  .review-card p,
+  .visit-note p {
+    color: #5b4435;
+    font-size: 1rem;
+    line-height: 1.52;
+  }
+
   .story-text p:first-child::first-letter {
     float: none;
     padding: 0;
