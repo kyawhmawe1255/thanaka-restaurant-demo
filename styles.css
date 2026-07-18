@@ -2047,6 +2047,13 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .story-text p:first-child::first-letter {
+    float: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+  }
+
   body.mobile-nav-open {
     overflow: hidden;
   }
