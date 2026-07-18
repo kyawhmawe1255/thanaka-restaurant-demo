@@ -317,11 +317,6 @@ p {
   border-right: 1px solid rgba(255, 255, 255, 0.13);
 }
 
-.quick-actions span {
-  color: #f0c96e;
-  font-weight: 800;
-}
-
 .quick-actions strong {
   font-size: 1.2rem;
 }
@@ -1617,12 +1612,6 @@ h1 {
 .quick-actions a {
   min-height: 154px;
   border-right: 1px solid var(--line);
-}
-
-.quick-actions span {
-  color: var(--lacquer);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.65rem;
 }
 
 .quick-actions strong {
