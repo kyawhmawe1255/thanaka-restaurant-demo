@@ -2591,6 +2591,53 @@ h1 {
     padding: 0 14px;
     font-size: 0.68rem;
   }
+
+  .menu-group:has(.category-menu-details[open]) {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-group:has(.category-menu-details[open]) .category-image,
+  .menu-group:nth-of-type(even):has(.category-menu-details[open]) .category-image {
+    order: 1;
+  }
+
+  .menu-group:has(.category-menu-details[open]) .category-copy,
+  .menu-group:nth-of-type(even):has(.category-menu-details[open]) .category-copy {
+    order: 2;
+    width: 100%;
+  }
+
+  .menu-group:has(.category-menu-details[open]) .category-menu-details {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .category-dishes,
+  .category-menu-details .harmony-card {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .category-menu-details .harmony-card {
+    padding: 22px 18px;
+    overflow: hidden;
+  }
+
+  .harmony-card-head {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .harmony-card h4 {
+    font-size: clamp(2rem, 12vw, 3rem);
+    line-height: 0.95;
+  }
+
+  .harmony-card-head > span {
+    width: fit-content;
+    max-width: 100%;
+    white-space: normal;
+  }
 }
 
 @media (max-width: 390px) {
@@ -2653,5 +2700,13 @@ h1 {
     min-height: 34px;
     padding-inline: 12px;
     font-size: 0.64rem;
+  }
+
+  .category-menu-details .harmony-card {
+    padding: 20px 16px;
+  }
+
+  .harmony-card h4 {
+    font-size: clamp(1.8rem, 11vw, 2.45rem);
   }
 }
