@@ -313,33 +313,6 @@ p {
   font-size: 1rem;
 }
 
-.quick-actions {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background:
-    linear-gradient(135deg, rgba(210, 166, 75, 0.1), transparent 34%),
-    var(--teak);
-  color: white;
-}
-
-.quick-actions a {
-  min-height: 132px;
-  display: grid;
-  align-content: center;
-  gap: 6px;
-  padding: 28px clamp(18px, 4vw, 48px);
-  border-right: 1px solid rgba(255, 255, 255, 0.13);
-}
-
-.quick-actions strong {
-  font-size: 1.2rem;
-}
-
-.quick-actions small {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 0.9rem;
-}
-
 .section {
   padding: clamp(62px, 9vw, 120px) clamp(18px, 5vw, 72px);
 }
@@ -1164,16 +1137,6 @@ footer img {
     display: none;
   }
 
-  .quick-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .quick-actions a {
-    min-height: 96px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-  }
-
   .menu-layout {
     grid-template-columns: 1fr;
   }
@@ -1614,34 +1577,6 @@ h1 {
 
 .hero-card div {
   border-top: 1px solid var(--line);
-}
-
-.quick-actions {
-  color: var(--ink);
-  background:
-    linear-gradient(135deg, rgba(108, 16, 34, 0.08), transparent 35%),
-    var(--paper);
-  border-block: 3px double var(--line);
-}
-
-.quick-actions a {
-  min-height: 154px;
-  border-right: 1px solid var(--line);
-}
-
-.quick-actions strong {
-  max-width: 320px;
-  color: var(--ink);
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.45rem, 2.2vw, 2rem);
-  line-height: 1.02;
-}
-
-.quick-actions small {
-  max-width: 360px;
-  color: var(--muted);
-  font-size: 0.98rem;
-  line-height: 1.45;
 }
 
 .section {
@@ -2311,15 +2246,6 @@ h1 {
     font-size: clamp(3.65rem, 20vw, 5.1rem);
   }
 
-  .quick-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .quick-actions a {
-    min-height: 122px;
-    border-right: 0;
-  }
-
   .menu-side,
   .menu-board,
   .menu-group {
@@ -2411,11 +2337,6 @@ h1 {
     text-align: left;
   }
 
-  .quick-actions a {
-    min-height: 104px;
-  }
-
-  .quick-actions small,
   .menu-row p,
   .story-text,
   .atmosphere-copy p,
