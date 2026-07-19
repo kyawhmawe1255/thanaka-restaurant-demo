@@ -2003,11 +2003,84 @@ h1 {
 }
 
 .story-section {
+  align-items: center;
+  padding-block: clamp(38px, 5vw, 68px);
   background:
     linear-gradient(90deg, rgba(251, 240, 213, 0.98), rgba(251, 240, 213, 0.9)),
     var(--paper);
   color: var(--ink);
   border-block: 3px double var(--line);
+}
+
+.story-preview {
+  max-width: 34rem;
+  margin: 14px 0 0;
+  color: var(--soft-ink);
+  font-size: clamp(1rem, 1.25vw, 1.13rem);
+  line-height: 1.55;
+}
+
+.story-intro h2 {
+  max-width: 18ch;
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  line-height: 1;
+}
+
+.story-disclosure {
+  justify-self: start;
+  width: min(100%, 780px);
+}
+
+.story-disclosure summary {
+  width: fit-content;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 24px;
+  border: 1px solid rgba(108, 16, 34, 0.34);
+  border-radius: 999px;
+  color: var(--paper);
+  background: var(--lacquer);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(88, 16, 30, 0.12);
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.story-disclosure summary::after {
+  content: "+";
+  color: var(--gold);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.story-disclosure[open] summary::after {
+  content: "-";
+}
+
+.story-disclosure summary::-webkit-details-marker,
+.story-disclosure summary::marker {
+  display: none;
+  content: "";
+}
+
+.story-disclosure summary:hover,
+.story-disclosure summary:focus-visible {
+  transform: translateY(-2px);
+  background: #58101e;
+  box-shadow: 0 18px 38px rgba(88, 16, 30, 0.16);
+}
+
+.story-disclosure .story-text {
+  margin-top: 24px;
 }
 
 .story-text {
@@ -2299,6 +2372,26 @@ h1 {
 
   .section-title {
     margin-bottom: 26px;
+  }
+
+  .story-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .story-preview,
+  .story-disclosure {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .story-disclosure {
+    justify-self: center;
+  }
+
+  .story-disclosure .story-text {
+    text-align: left;
   }
 
   .quick-actions a {
