@@ -1760,7 +1760,7 @@ h1 {
 }
 
 .menu-board {
-  gap: 0;
+  gap: clamp(80px, 9vw, 120px);
   transition:
     opacity 220ms ease,
     transform 220ms ease;
@@ -1772,133 +1772,136 @@ h1 {
 }
 
 .menu-group {
-  position: relative;
-  display: block;
-  min-height: clamp(380px, 40vw, 520px);
-  padding: clamp(18px, 2.4vw, 28px) 0 clamp(48px, 7vw, 92px);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(34px, 6vw, 78px);
+  align-items: center;
+  min-height: 0;
+  padding: 0;
   border: 0;
   background: transparent;
-  isolation: isolate;
 }
 
-.menu-group + .menu-group {
-  margin-top: clamp(42px, 7vw, 88px);
+.menu-group:nth-of-type(even) {
+  grid-template-columns: 1fr 1.2fr;
 }
 
-.menu-group::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: clamp(34px, 5vw, 68px);
-  left: 0;
-  width: min(44%, 540px);
-  border: 1px solid rgba(79, 32, 18, 0.22);
-  background-color: rgba(81, 36, 20, 0.16);
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 26px 70px rgba(79, 32, 18, 0.16);
-  z-index: -1;
-}
-
-.menu-group:nth-of-type(even)::before {
-  right: 0;
-  left: auto;
-}
-
-.menu-group > h3,
-.menu-group > .menu-row,
-.menu-group > .harmony-card {
-  width: min(100%, 540px);
-  margin-left: calc(47% + clamp(28px, 5vw, 68px));
-}
-
-.menu-group:nth-of-type(even) > h3,
-.menu-group:nth-of-type(even) > .menu-row,
-.menu-group:nth-of-type(even) > .harmony-card {
-  margin-right: calc(47% + clamp(28px, 5vw, 68px));
-  margin-left: 0;
-}
-
-.menu-group[data-category="soup"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/atiri-food/ohn-no-khaukswe.png");
-}
-
-.menu-group[data-category="salad"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/atiri-food/lahphet-thoke.png");
-}
-
-.menu-group[data-category="wok-tossed"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/atiri-food/fried-rice.png");
-}
-
-.menu-group[data-category="curry"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/atiri-food/burmese-curry.png");
-}
-
-.menu-group[data-category="harmony"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/thanaka-hero-food.jpeg");
-  background-position: 42% center;
-}
-
-.menu-group[data-category="sets"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/atiri-food/coconut-rice-plate.png");
-}
-
-.menu-group[data-category="drinks"]::before {
-  background-image:
-    linear-gradient(rgba(46, 18, 10, 0.04), rgba(46, 18, 10, 0.08)),
-    url("public/assets/atiri-food/iced-matcha-strawberry.png");
-}
-
-.menu-group[data-category="salad"] {
-  order: 1;
-}
-
-.menu-group[data-category="soup"] {
+.menu-group:nth-of-type(even) .category-image {
   order: 2;
 }
 
-.menu-group[data-category="curry"] {
-  order: 3;
-}
-
-.menu-group[data-category="wok-tossed"] {
-  order: 4;
-}
-
-.menu-group[data-category="sets"] {
-  order: 5;
+.menu-group:nth-of-type(even) .category-copy {
+  order: 1;
 }
 
 .menu-group[data-category="harmony"] {
-  order: 6;
+  grid-template-columns: 1.2fr 1fr;
 }
 
-.menu-group[data-category="drinks"] {
-  order: 7;
+.category-image {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(79, 32, 18, 0.18);
+  border-radius: clamp(16px, 2vw, 24px);
+  background: rgba(81, 36, 20, 0.12);
+  box-shadow: 0 26px 70px rgba(79, 32, 18, 0.14);
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 520ms ease;
+}
+
+.category-copy {
+  max-width: 560px;
+}
+
+.category-eyebrow {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(0.98rem, 1.2vw, 1.18rem);
+  font-style: italic;
+  font-weight: 700;
 }
 
 .menu-group h3 {
-  margin-bottom: 14px;
-  padding-bottom: 14px;
+  margin: 0 0 14px;
+  padding-bottom: 0;
   color: var(--lacquer);
-  border-bottom: 3px double var(--line);
+  border-bottom: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(1.8rem, 3vw, 3.1rem);
+  font-size: clamp(2.35rem, 4vw, 4.75rem);
+  line-height: 0.95;
   letter-spacing: 0.02em;
   text-transform: none;
+}
+
+.category-description {
+  max-width: 34rem;
+  margin: 0 0 24px;
+  color: var(--soft-ink);
+  font-size: clamp(1rem, 1.35vw, 1.16rem);
+  line-height: 1.62;
+}
+
+.category-menu-details {
+  width: 100%;
+}
+
+.category-menu-details summary {
+  width: fit-content;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border: 1px solid rgba(108, 16, 34, 0.35);
+  border-radius: 999px;
+  color: var(--lacquer);
+  background: rgba(251, 240, 213, 0.52);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.category-menu-details summary::-webkit-details-marker,
+.category-menu-details summary::marker {
+  display: none;
+  content: "";
+}
+
+.category-menu-details summary:hover,
+.category-menu-details summary:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--lacquer);
+  color: var(--paper);
+  background: var(--lacquer);
+  box-shadow: 0 14px 28px rgba(88, 16, 30, 0.12);
+}
+
+.category-menu-details[open] summary {
+  color: var(--paper);
+  background: var(--lacquer);
+}
+
+.category-dishes,
+.category-menu-details .harmony-card {
+  margin-top: 24px;
 }
 
 .menu-row {
@@ -1954,7 +1957,33 @@ h1 {
 }
 
 .harmony-card h4 {
-  font-size: clamp(3.2rem, 7vw, 6.8rem);
+  font-size: clamp(2.3rem, 5vw, 4.6rem);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu-group:hover .category-image img {
+    transform: scale(1.045);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes categoryFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(34px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .menu-group {
+    animation: categoryFadeUp 680ms ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
 }
 
 .harmony-pricing {
@@ -2156,33 +2185,47 @@ h1 {
   }
 
   .menu-group {
-    min-height: 0;
-    padding-top: calc(min(58vw, 330px) + 22px);
+    grid-template-columns: 1fr;
+    gap: 22px;
+    justify-items: center;
+    text-align: center;
   }
 
-  .menu-group::before {
-    top: 0;
-    right: 0;
-    bottom: auto;
-    left: 0;
+  .menu-group:nth-of-type(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-group[data-category="harmony"] {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-group:nth-of-type(even) .category-image,
+  .menu-group:nth-of-type(even) .category-copy {
+    order: initial;
+  }
+
+  .category-image {
     width: 100%;
-    height: min(58vw, 330px);
+    max-width: 560px;
+    border-radius: 20px;
   }
 
-  .menu-group:nth-of-type(even)::before {
-    right: 0;
-    left: 0;
+  .category-copy {
+    max-width: 560px;
   }
 
-  .menu-group > h3,
-  .menu-group > .menu-row,
-  .menu-group > .harmony-card,
-  .menu-group:nth-of-type(even) > h3,
-  .menu-group:nth-of-type(even) > .menu-row,
-  .menu-group:nth-of-type(even) > .harmony-card {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
+  .category-description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .category-menu-details summary {
+    margin-inline: auto;
+  }
+
+  .category-dishes,
+  .category-menu-details .harmony-card {
+    text-align: left;
   }
 }
 
@@ -2221,11 +2264,27 @@ h1 {
   }
 
   .menu-group {
-    padding: calc(min(62vw, 300px) + 18px) 0 34px;
+    gap: 18px;
   }
 
-  .menu-group::before {
-    height: min(62vw, 300px);
+  .menu-board {
+    gap: 52px;
+  }
+
+  .category-image {
+    border-radius: 18px;
+  }
+
+  .category-copy {
+    padding-inline: 6px;
+  }
+
+  .menu-group h3 {
+    font-size: clamp(2.1rem, 13vw, 3.55rem);
+  }
+
+  .category-description {
+    font-size: 1rem;
   }
 
   .harmony-card h4 {
