@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=explore-menu-heading">
+    <link rel="stylesheet" href="styles.css?v=menu-category-row">
   </head>
   <body>
     <header class="site-header">
@@ -112,14 +112,14 @@
 
         <div class="menu-layout">
           <aside class="menu-side" aria-label="Menu categories">
-            <button class="tab active" type="button" data-filter="all">All</button>
-            <button class="tab" type="button" data-filter="salad">Salads</button>
-            <button class="tab" type="button" data-filter="soup">Soups</button>
-            <button class="tab" type="button" data-filter="curry">Curry & Rice</button>
-            <button class="tab" type="button" data-filter="wok-tossed">Wok Tossed</button>
-            <button class="tab" type="button" data-filter="sets">Thanaka Set Meals</button>
-            <button class="tab" type="button" data-filter="harmony">Harmony Plate</button>
-            <button class="tab" type="button" data-filter="drinks">Drinks</button>
+            <button class="tab" type="button" data-filter="recommended" aria-pressed="false">Most Recommended</button>
+            <button class="tab active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="tab" type="button" data-filter="salad" aria-pressed="false">Salads</button>
+            <button class="tab" type="button" data-filter="soup" aria-pressed="false">Soups</button>
+            <button class="tab" type="button" data-filter="curry" aria-pressed="false">Curry & Rice</button>
+            <button class="tab" type="button" data-filter="wok-tossed" aria-pressed="false">Wok Tossed</button>
+            <button class="tab" type="button" data-filter="harmony" aria-pressed="false">Harmony Plate</button>
+            <button class="tab" type="button" data-filter="drinks" aria-pressed="false">Drinks</button>
           </aside>
 
           <div class="menu-board">
@@ -127,14 +127,14 @@
               <h3>Soups</h3>
               <article class="menu-row"><div><strong>Rakhine Moke Ti</strong><p>Rakhine style fish and pepper soup.</p></div><span>170</span></article>
               <article class="menu-row"><div><strong>Moke Hin Kha</strong><p>The national dish of Burma - fish, lemongrass and banana stem soup.</p></div><span>170</span></article>
-              <article class="menu-row"><div><strong>Ohn No Khauk Swe</strong><p>Chicken and coconut cream soup.</p></div><span>170</span></article>
+              <article class="menu-row" data-recommended="true"><div><strong>Ohn No Khauk Swe</strong><p>Chicken and coconut cream soup.</p></div><span>170</span></article>
               <article class="menu-row"><div><strong>Wat Tar Dot Htole</strong><p>Pork stick soup in clay pot.</p></div><span>170</span></article>
               <article class="menu-row"><div><strong>Tabawa Hincho</strong><p>Vegetable soup with Burmese tofu.</p></div><span>170</span></article>
             </section>
 
             <section class="menu-group" data-category="salad">
               <h3>Salads</h3>
-              <article class="menu-row"><div><strong>Lahphet Thoke</strong><p>Fermented tea leaf salad.</p></div><span>140</span></article>
+              <article class="menu-row" data-recommended="true"><div><strong>Lahphet Thoke</strong><p>Fermented tea leaf salad.</p></div><span>140</span></article>
               <article class="menu-row"><div><strong>Shouk Ti Thoke</strong><p>Giant green lime salad.</p></div><span>140</span></article>
               <article class="menu-row"><div><strong>Myin Kwar Ywet Thoke</strong><p>Fresh gotu kola salad.</p></div><span>140</span></article>
               <article class="menu-row"><div><strong>Pal Pyar Thoke</strong><p>Burmese tofu salad.</p></div><span>140</span></article>
@@ -144,7 +144,7 @@
 
             <section class="menu-group" data-category="wok-tossed">
               <h3>Wok Tossed</h3>
-              <article class="menu-row" data-tags="Tofu 160B, Chicken/Pork/Seafood 190B"><div><strong>Thamin Kyaw</strong><p>Burmese fried rice.</p></div><span>160/190</span></article>
+              <article class="menu-row" data-recommended="true" data-tags="Tofu 160B, Chicken/Pork/Seafood 190B"><div><strong>Thamin Kyaw</strong><p>Burmese fried rice.</p></div><span>160/190</span></article>
               <article class="menu-row" data-tags="Tofu 160B, Chicken/Pork/Seafood 190B"><div><strong>Khauk Swe Kyaw</strong><p>Burmese fried yellow noodles.</p></div><span>160/190</span></article>
               <article class="menu-row" data-tags="Tofu 160B, Chicken/Pork/Seafood 190B"><div><strong>Lahphet Thamin</strong><p>Rice with punchy tea leaves, peanut, garlic and fried egg on top.</p></div><span>160/190</span></article>
               <article class="menu-row" data-tags="Tofu 160B, Chicken/Pork/Seafood 190B"><div><strong>Si Chat Khauk Swe</strong><p>Garlic-oil noodles with spicy salad.</p></div><span>160/190</span></article>
@@ -153,11 +153,11 @@
 
             <section class="menu-group" data-category="curry">
               <h3>Curry & Rice</h3>
-              <article class="menu-row"><div><strong>Clay Pot Curry</strong><p>Ask our family about today's specials.</p></div><span>from 160</span></article>
+              <article class="menu-row" data-recommended="true"><div><strong>Clay Pot Curry</strong><p>Ask our family about today's specials.</p></div><span>from 160</span></article>
               <article class="menu-row"><div><strong>Curry & Rice</strong><p>Clay pot curry served with rice. Starts from 160B.</p></div><span>from 160</span></article>
             </section>
 
-            <section class="menu-group" data-category="harmony" id="harmony">
+            <section class="menu-group" data-category="harmony" id="harmony" data-recommended="true">
               <h3>Burmese Harmony Plate</h3>
               <article class="harmony-card">
                 <div class="harmony-card-head">
@@ -205,7 +205,7 @@
               <h3>Thanaka Set Meals</h3>
               <article class="menu-row" data-tags="Set option 1, Vegan"><div><strong>Set 1 · Bagan Vegan</strong><p>Tabawa Hincho, Pal Pyar Thoke, tofu wok rice, seasonal pickle, and coconut ice cream.</p></div><span>390</span></article>
               <article class="menu-row" data-tags="Set option 2, Vegetarian"><div><strong>Set 2 · Inle Vegetarian</strong><p>Lahphet Thoke, Si Chat Khauk Swe with fried egg, clear soup, and Burmese milk tea.</p></div><span>420</span></article>
-              <article class="menu-row" data-tags="Set option 3, Chicken"><div><strong>Set 3 · Mandalay Chicken</strong><p>Ohn No Khauk Swe, Nan Gyi Thoke, chicken wok tossed rice, and butterfly pea lemonade.</p></div><span>450</span></article>
+              <article class="menu-row" data-recommended="true" data-tags="Set option 3, Chicken"><div><strong>Set 3 · Mandalay Chicken</strong><p>Ohn No Khauk Swe, Nan Gyi Thoke, chicken wok tossed rice, and butterfly pea lemonade.</p></div><span>450</span></article>
               <article class="menu-row" data-tags="Set option 4, Pork"><div><strong>Set 4 · Shan Pork</strong><p>Wat Tar Dot Htole, clay pot pork curry with rice, fresh gotu kola salad, and syrok.</p></div><span>480</span></article>
               <article class="menu-row" data-tags="Set option 5, Seafood"><div><strong>Set 5 · Rakhine Seafood</strong><p>Rakhine Moke Ti, seafood wok noodles, Shouk Ti Thoke, and fresh coconut.</p></div><span>520</span></article>
             </section>
@@ -217,7 +217,7 @@
               <article class="menu-row no-thumb" data-tags="Refresher"><div><strong>Fresh Coconut</strong><p>Fresh coconut.</p></div><span>100</span></article>
               <article class="menu-row no-thumb" data-tags="Homemade"><div><strong>Burmese Milk Tea</strong><p>Homemade Burmese milk tea.</p></div><span>70</span></article>
               <article class="menu-row no-thumb" data-tags="Homemade"><div><strong>Burmese Cold Brew Ice Tea</strong><p>Cold brew Burmese tea served over ice.</p></div><span>100</span></article>
-              <article class="menu-row no-thumb" data-tags="Homemade"><div><strong>Butterfly Pea Lemonade</strong><p>Bright butterfly pea lemonade.</p></div><span>100</span></article>
+              <article class="menu-row no-thumb" data-recommended="true" data-tags="Homemade"><div><strong>Butterfly Pea Lemonade</strong><p>Bright butterfly pea lemonade.</p></div><span>100</span></article>
               <article class="menu-row no-thumb" data-tags="Fruity"><div><strong>Smoothie</strong><p>Mango, pineapple, watermelon, banana, passion fruit, or strawberry. Strawberry +20B.</p></div><span>100</span></article>
               <article class="menu-row no-thumb" data-tags="Fruity"><div><strong>Milkshake</strong><p>Mango, pineapple, watermelon, banana, passion fruit, or strawberry. Strawberry +20B.</p></div><span>120</span></article>
               <article class="menu-row no-thumb" data-tags="Fruity"><div><strong>Create Your Own Mix</strong><p>Create your own fruit mix.</p></div><span>140</span></article>

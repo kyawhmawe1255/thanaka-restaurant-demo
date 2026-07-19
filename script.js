@@ -1,6 +1,7 @@
 const tabs = document.querySelectorAll(".tab");
 const groups = document.querySelectorAll(".menu-group");
 const rows = document.querySelectorAll(".menu-row");
+const menuBoard = document.querySelector(".menu-board");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 const mobileMenuClose = document.querySelector(".mobile-menu-close");
@@ -211,13 +212,33 @@ tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const filter = tab.dataset.filter;
 
-    tabs.forEach((item) => item.classList.remove("active"));
-    tab.classList.add("active");
-
-    groups.forEach((group) => {
-      const matches = filter === "all" || group.dataset.category === filter;
-      group.classList.toggle("is-hidden", !matches);
+    tabs.forEach((item) => {
+      item.classList.remove("active");
+      item.setAttribute("aria-pressed", "false");
     });
+    tab.classList.add("active");
+    tab.setAttribute("aria-pressed", "true");
+
+    menuBoard?.classList.add("is-filtering");
+
+    window.setTimeout(() => {
+      groups.forEach((group) => {
+        const isRecommendedGroup = group.dataset.recommended === "true";
+        const groupRows = [...group.querySelectorAll(".menu-row")];
+
+        groupRows.forEach((row) => {
+          row.classList.toggle("is-hidden", filter === "recommended" && row.dataset.recommended !== "true");
+        });
+
+        const matchesCategory = filter === "all" || group.dataset.category === filter;
+        const hasRecommendedRows = groupRows.some((row) => row.dataset.recommended === "true");
+        const matchesRecommended = filter === "recommended" && (isRecommendedGroup || hasRecommendedRows);
+
+        group.classList.toggle("is-hidden", !(matchesCategory || matchesRecommended));
+      });
+
+      menuBoard?.classList.remove("is-filtering");
+    }, 120);
 
     document.querySelector(".menu-board")?.scrollIntoView({
       behavior: "smooth",
