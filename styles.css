@@ -2677,6 +2677,27 @@ h1 {
     overflow: hidden;
   }
 
+  .category-menu-details[open] .menu-row.has-image {
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .category-menu-details[open] .menu-thumb {
+    width: 76px;
+    height: 76px;
+    grid-column: auto;
+    grid-row: 1 / span 2;
+    display: block;
+    border: 1px solid rgba(79, 32, 18, 0.14);
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  .category-menu-details[open] .menu-row.has-image > div {
+    min-width: 0;
+  }
+
   .harmony-card-head {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -2767,6 +2788,17 @@ h1 {
 
   .category-menu-details .harmony-card {
     padding: 20px 16px;
+  }
+
+  .category-menu-details[open] .menu-row.has-image {
+    grid-template-columns: 64px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .category-menu-details[open] .menu-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
   }
 
   .harmony-card h4 {
