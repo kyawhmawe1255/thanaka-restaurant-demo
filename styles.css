@@ -2156,14 +2156,15 @@ h1 {
   .hero-welcome {
     display: block;
     margin: 0 0 6px;
-    color: #fff7e9;
+    color: #f7d889;
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(1.25rem, 6vw, 1.8rem);
     font-weight: 700;
     line-height: 1;
     text-shadow:
-      0 2px 10px rgba(0, 0, 0, 0.72),
-      0 0 22px rgba(37, 15, 8, 0.64);
+      0 2px 10px rgba(0, 0, 0, 0.84),
+      0 0 14px rgba(247, 216, 137, 0.52),
+      0 0 28px rgba(211, 163, 66, 0.34);
   }
 
   .hero h1 {
