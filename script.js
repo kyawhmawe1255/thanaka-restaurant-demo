@@ -41,33 +41,35 @@ mobileMenu?.addEventListener("click", (event) => {
 mobileMenuLinks.forEach((link) => link.addEventListener("click", closeMobileMenu));
 
 const menuImages = {
-  "Rakhine Moke Ti": "tom-yum.png",
-  "Moke Hin Kha": "tom-yum.png",
-  "Ohn No Khauk Swe": "ohn-no-khaukswe.png",
-  "Wat Tar Dot Htole": "burmese-curry.png",
-  "Tabawa Hincho": "buddha-bowl.png",
-  "Lahphet Thoke": "lahphet-thoke.png",
-  "Shouk Ti Thoke": "centella-thoke.png",
-  "Myin Kwar Ywet Thoke": "centella-thoke.png",
-  "Pal Pyar Thoke": "buddha-bowl.png",
-  "Ahsone Thoke": "nan-gyi-thoke.png",
-  "Nan Gyi Thoke": "nan-gyi-thoke.png",
-  "Thamin Kyaw": "fried-rice.png",
-  "Khauk Swe Kyaw": "stir-fried-noodle.png",
-  "Lahphet Thamin": "fried-rice.png",
-  "Si Chat Khauk Swe": "stir-fried-noodle.png",
-  "Mala Shan Gaw": "stir-fried-noodle.png",
-  "Clay Pot Curry": "burmese-curry.png",
-  "Curry & Rice": "coconut-rice-plate.png",
-  "Set 1 · Bagan Vegan": "buddha-bowl.png",
-  "Set 2 · Inle Vegetarian": "lahphet-thoke.png",
-  "Set 3 · Mandalay Chicken": "ohn-no-khaukswe.png",
-  "Set 4 · Shan Pork": "burmese-curry.png",
-  "Set 5 · Rakhine Seafood": "tom-yum.png",
+  "Rakhine Moke Ti": "rakhine-moke-ti.jpeg",
+  "Moke Hin Kha": "moke-hin-kha.jpeg",
+  "Ohn No Khauk Swe": "ohn-no-khauk-swe.jpeg",
+  "Wat Tar Dot Htole": "wat-tar-dot-htole.jpeg",
+  "Tabawa Hincho": "tabawa-hincho.jpeg",
+  "Lahphet Thoke": "lahphet-thoke.jpeg",
+  "Shouk Ti Thoke": "shouk-ti-thoke.jpeg",
+  "Myin Kwar Ywet Thoke": "myin-kwar-ywet-thoke.jpeg",
+  "Pal Pyar Thoke": "pal-pyar-thoke.jpeg",
+  "Ahsone Thoke": "ahsone-thoke.jpeg",
+  "Nan Gyi Thoke": "nan-gyi-thoke.jpeg",
+  "Thamin Kyaw": "thamin-kyaw.jpeg",
+  "Khauk Swe Kyaw": "khauk-swe-kyaw.jpeg",
+  "Lahphet Thamin": "lahphet-thamin.jpeg",
+  "Si Chat Khauk Swe": "si-chat-khauk-swe.jpeg",
+  "Mala Shan Gaw": "mala-shan-gaw.jpeg",
+  "Clay Pot Curry": "clay-pot-curry.jpeg",
+  "Curry & Rice": "clay-pot-curry.jpeg",
+  "Set 1 · Bagan Vegan": "tabawa-hincho.jpeg",
+  "Set 2 · Inle Vegetarian": "lahphet-thoke.jpeg",
+  "Set 3 · Mandalay Chicken": "ohn-no-khauk-swe.jpeg",
+  "Set 4 · Shan Pork": "wat-tar-dot-htole.jpeg",
+  "Set 5 · Rakhine Seafood": "rakhine-moke-ti.jpeg",
   "Tiramisu": "atirimisu.png",
   "Syrok": "syrok.png",
   "Coco-Ice Cream Cup": "atirimisu.png"
 };
+
+const menuImageBase = "public/assets/thanaka-menu/";
 
 const menuDialog = document.createElement("div");
 menuDialog.className = "menu-dialog";
@@ -159,7 +161,7 @@ rows.forEach((row) => {
   if (image && !row.classList.contains("no-thumb")) {
     const thumb = document.createElement("img");
     thumb.className = "menu-thumb";
-    thumb.src = `public/assets/atiri-food/${image}`;
+    thumb.src = `${menuImageBase}${image}`;
     thumb.alt = title;
     thumb.loading = "lazy";
     row.prepend(thumb);
