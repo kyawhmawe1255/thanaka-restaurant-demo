@@ -2335,20 +2335,20 @@ h1 {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: clamp(360px, 44svh, 420px);
-    align-items: start;
-    padding: 54px 18px 26px;
+    min-height: clamp(600px, 76svh, 690px);
+    align-items: center;
+    padding: clamp(96px, 15svh, 124px) 18px 48px;
   }
 
   .hero-bg {
-    object-position: 46% top;
+    object-position: center;
     transform: none;
   }
 
   .hero-shade {
     background:
-      linear-gradient(180deg, rgba(37, 15, 8, 0.08) 0%, rgba(37, 15, 8, 0.3) 42%, rgba(37, 15, 8, 0.74) 82%, rgba(37, 15, 8, 0.92) 100%),
-      radial-gradient(circle at 50% 42%, rgba(37, 15, 8, 0.06), rgba(37, 15, 8, 0.58) 74%);
+      linear-gradient(180deg, rgba(37, 15, 8, 0.52) 0%, rgba(37, 15, 8, 0.42) 42%, rgba(37, 15, 8, 0.58) 72%, rgba(37, 15, 8, 0.82) 100%),
+      radial-gradient(circle at 50% 42%, rgba(37, 15, 8, 0.18), rgba(37, 15, 8, 0.56) 72%);
   }
 
   .section {
@@ -2356,11 +2356,19 @@ h1 {
   }
 
   .hero-content p:not(.kicker):not(.hero-welcome) {
-    margin-top: 12px;
+    margin-top: 18px;
   }
 
   .hero-actions {
-    margin-top: 18px;
+    margin-top: clamp(34px, 6svh, 48px);
+  }
+
+  .hero-welcome {
+    margin-bottom: clamp(20px, 4.5vw, 28px);
+    color: #fff8e8;
+    text-shadow:
+      0 2px 12px rgba(0, 0, 0, 0.82),
+      0 0 26px rgba(37, 15, 8, 0.76);
   }
 
   .section-title {
@@ -2729,8 +2737,8 @@ h1 {
   }
 
   .hero {
-    min-height: clamp(340px, 42svh, 398px);
-    padding: 48px 16px 24px;
+    min-height: clamp(570px, 74svh, 650px);
+    padding: 92px 16px 44px;
   }
 
   .menu-group,
