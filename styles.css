@@ -2336,8 +2336,8 @@ h1 {
 @media (max-width: 768px) {
   .hero {
     min-height: clamp(360px, 44svh, 420px);
-    align-items: start;
-    padding: 54px 18px 26px;
+    align-items: center;
+    padding: 66px 18px 32px;
   }
 
   .hero-bg {
@@ -2361,6 +2361,10 @@ h1 {
 
   .hero-actions {
     margin-top: 18px;
+  }
+
+  .hero-content {
+    transform: translateY(18px);
   }
 
   .section-title {
@@ -2730,7 +2734,11 @@ h1 {
 
   .hero {
     min-height: clamp(340px, 42svh, 398px);
-    padding: 48px 16px 24px;
+    padding: 60px 16px 30px;
+  }
+
+  .hero-content {
+    transform: translateY(14px);
   }
 
   .menu-group,
