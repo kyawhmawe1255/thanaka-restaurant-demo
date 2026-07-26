@@ -59,11 +59,6 @@ const menuImages = {
   "Mala Shan Gaw": "mala-shan-gaw.jpeg",
   "Clay Pot Curry": "clay-pot-curry.jpeg",
   "Curry & Rice": "clay-pot-curry.jpeg",
-  "Set 1 · Bagan Vegan": "tabawa-hincho.jpeg",
-  "Set 2 · Inle Vegetarian": "lahphet-thoke.jpeg",
-  "Set 3 · Mandalay Chicken": "ohn-no-khauk-swe.jpeg",
-  "Set 4 · Shan Pork": "wat-tar-dot-htole.jpeg",
-  "Set 5 · Rakhine Seafood": "rakhine-moke-ti.jpeg",
   "Tiramisu": "atirimisu.png",
   "Syrok": "syrok.png",
   "Coco-Ice Cream Cup": "atirimisu.png"
@@ -210,13 +205,20 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+function applyMenuFilter(filter) {
+  groups.forEach((group) => {
+    const matchesCategory = group.dataset.category === filter;
+    group.classList.toggle("is-hidden", !matchesCategory);
+  });
+}
+
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const filter = tab.dataset.filter;
 
     tabs.forEach((item) => {
-      item.classList.remove("active");
-      item.setAttribute("aria-pressed", "false");
+      item.classList.toggle("active", item === tab);
+      item.setAttribute("aria-pressed", item === tab ? "true" : "false");
     });
     tab.classList.add("active");
     tab.setAttribute("aria-pressed", "true");
@@ -224,21 +226,7 @@ tabs.forEach((tab) => {
     menuBoard?.classList.add("is-filtering");
 
     window.setTimeout(() => {
-      groups.forEach((group) => {
-        const isRecommendedGroup = group.dataset.recommended === "true";
-        const groupRows = [...group.querySelectorAll(".menu-row")];
-
-        groupRows.forEach((row) => {
-          row.classList.toggle("is-hidden", filter === "recommended" && row.dataset.recommended !== "true");
-        });
-
-        const matchesCategory = filter === "all" || group.dataset.category === filter;
-        const hasRecommendedRows = groupRows.some((row) => row.dataset.recommended === "true");
-        const matchesRecommended = filter === "recommended" && (isRecommendedGroup || hasRecommendedRows);
-
-        group.classList.toggle("is-hidden", !(matchesCategory || matchesRecommended));
-      });
-
+      applyMenuFilter(filter);
       menuBoard?.classList.remove("is-filtering");
     }, 120);
 
@@ -248,3 +236,5 @@ tabs.forEach((tab) => {
     });
   });
 });
+
+applyMenuFilter(document.querySelector(".tab.active")?.dataset.filter || "recommended");
