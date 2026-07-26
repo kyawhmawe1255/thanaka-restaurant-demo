@@ -1614,12 +1614,17 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.76rem;
+  font-weight: 700;
   cursor: pointer;
   transition:
     transform 180ms ease,
     background-color 220ms ease,
     color 220ms ease,
     box-shadow 220ms ease;
+}
+
+.tab[data-filter="recommended"] {
+  font-weight: 900;
 }
 
 .tab::after {
@@ -1943,17 +1948,17 @@ h1 {
 
 .story-disclosure summary {
   width: fit-content;
-  min-height: 48px;
+  min-height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 0 24px;
+  padding: 0 20px;
   border: 1px solid rgba(108, 16, 34, 0.34);
   border-radius: 999px;
   color: var(--paper);
   background: var(--lacquer);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1968,7 +1973,7 @@ h1 {
 .story-disclosure summary::after {
   content: "+";
   color: var(--gold);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1;
 }
 
