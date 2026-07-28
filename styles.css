@@ -975,6 +975,8 @@ p {
 }
 
 .reviews-section {
+  margin-top: clamp(28px, 5vw, 72px);
+  border-top: 3px double var(--line);
   background: var(--paper);
 }
 
@@ -2250,6 +2252,10 @@ h1 {
   background: var(--cream);
 }
 
+.reviews-section {
+  border-top: 3px double var(--line);
+}
+
 .atmosphere-layout {
   gap: 18px;
 }
@@ -2523,6 +2529,11 @@ h1 {
 
   .section {
     padding: 48px 20px;
+  }
+
+  .reviews-section {
+    margin-top: 36px;
+    padding-top: 58px;
   }
 
   .hero-content p:not(.kicker):not(.hero-welcome) {
