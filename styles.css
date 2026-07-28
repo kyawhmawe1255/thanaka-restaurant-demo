@@ -1644,12 +1644,10 @@ h1 {
 }
 
 .tab.active {
-  color: var(--paper);
-  background: #58101e;
-  padding-inline: 18px;
-  box-shadow:
-    0 10px 24px rgba(88, 16, 30, 0.14),
-    inset 0 -2px 0 rgba(211, 163, 66, 0.55);
+  color: var(--lacquer);
+  background: transparent;
+  padding-inline: 3px;
+  box-shadow: none;
 }
 
 .tab:hover,
@@ -1660,8 +1658,8 @@ h1 {
 
 .tab.active:hover,
 .tab.active:focus-visible {
-  color: var(--paper);
-  background: #58101e;
+  color: var(--lacquer);
+  background: transparent;
 }
 
 .tab:active {
@@ -2278,7 +2276,7 @@ h1 {
   }
 
   .tab.active {
-    padding-inline: 16px;
+    padding-inline: 2px;
   }
 
   .menu-group {
