@@ -995,7 +995,79 @@ p {
   background: white;
 }
 
-.rating-summary strong {
+.review-feature-card {
+  width: min(100%, 520px);
+  gap: 24px;
+  padding: clamp(24px, 4vw, 38px);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(211, 163, 66, 0.12), transparent 44%),
+    rgba(251, 240, 213, 0.76);
+  box-shadow: 0 26px 60px rgba(79, 32, 18, 0.1);
+}
+
+.review-feature-rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 14px;
+  color: var(--soft-ink);
+  font-family: "Courier New", monospace;
+}
+
+.review-feature-rating strong {
+  color: var(--gold);
+  font-family: "Courier New", monospace;
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.review-feature-rating small {
+  flex-basis: 100%;
+  color: var(--soft-ink);
+  font-family: "Courier New", monospace;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+.review-feature-line {
+  width: min(100%, 330px);
+  height: 2px;
+  background: rgba(75, 45, 32, 0.5);
+}
+
+.review-feature-card blockquote {
+  margin: 0;
+  color: var(--leaf);
+  font-family: "Courier New", monospace;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  line-height: 1.45;
+}
+
+.review-feature-byline,
+.review-feature-link {
+  margin: 0;
+  color: var(--soft-ink);
+  font-family: "Courier New", monospace;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+}
+
+.review-feature-link {
+  width: fit-content;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.review-feature-link:hover,
+.review-feature-link:focus-visible {
+  color: var(--lacquer);
+  transform: translateX(4px);
+}
+
+.rating-summary > strong {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 3.4rem;
   line-height: 0.9;
@@ -1007,7 +1079,7 @@ p {
   letter-spacing: 0.03em;
 }
 
-.rating-summary small,
+.rating-summary > small,
 .review-meta small {
   color: var(--muted);
   font-weight: 700;
@@ -1027,6 +1099,10 @@ p {
   padding: 22px;
   border: 1px solid var(--line);
   background: white;
+}
+
+#full-google-review {
+  scroll-margin-top: 110px;
 }
 
 .wide-review {
