@@ -902,6 +902,28 @@ p {
   grid-column: span 2;
 }
 
+.atmosphere-note {
+  grid-column: span 2;
+  max-width: 760px;
+  margin: 8px 0 2px;
+}
+
+.atmosphere-note h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.atmosphere-note p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--soft-ink);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  line-height: 1.55;
+}
+
 .atmosphere-photo img {
   width: 100%;
   height: 100%;
