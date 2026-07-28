@@ -1981,6 +1981,28 @@ h1 {
   box-shadow: none;
 }
 
+.menu-group:not([data-category="recommended"]):not([data-category="harmony"]) {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.menu-group:not([data-category="recommended"]):not([data-category="harmony"]) .category-image {
+  display: none;
+}
+
+.menu-group:not([data-category="recommended"]):not([data-category="harmony"]) .category-copy {
+  max-width: min(100%, 980px);
+}
+
+.menu-group:not([data-category="recommended"]) .category-menu-details summary {
+  display: none;
+}
+
+.menu-group:not([data-category="recommended"]) .category-dishes,
+.menu-group:not([data-category="recommended"]) .category-menu-details .harmony-card {
+  margin-top: 28px;
+}
+
 .category-dishes,
 .category-menu-details .harmony-card {
   margin-top: 24px;
@@ -2807,6 +2829,17 @@ h1 {
   .menu-group:has(.category-menu-details[open]) .category-image,
   .menu-group:nth-of-type(even):has(.category-menu-details[open]) .category-image {
     order: 1;
+  }
+
+  .menu-group:not([data-category="recommended"]):not([data-category="harmony"]),
+  .menu-group:not([data-category="recommended"]):not([data-category="harmony"]):has(.category-menu-details[open]) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .menu-group:not([data-category="recommended"]):not([data-category="harmony"]) .category-image,
+  .menu-group:not([data-category="recommended"]):not([data-category="harmony"]):has(.category-menu-details[open]) .category-image {
+    display: none;
   }
 
   .menu-group:has(.category-menu-details[open]) .category-copy,
