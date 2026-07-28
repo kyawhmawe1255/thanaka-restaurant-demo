@@ -1009,6 +1009,11 @@ p {
   box-shadow: none;
 }
 
+.rating-summary.review-feature-card {
+  border: 0;
+  background: transparent;
+}
+
 .review-feature-rating {
   display: flex;
   flex-wrap: wrap;
@@ -2255,7 +2260,6 @@ h1 {
 
 .atmosphere-copy article,
 .review-card,
-.rating-summary,
 .visit-button,
 .visit-note {
   background: rgba(251, 240, 213, 0.76);
