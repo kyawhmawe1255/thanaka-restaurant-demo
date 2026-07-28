@@ -1812,6 +1812,21 @@ h1 {
   background: var(--lacquer);
 }
 
+.menu-group[data-category="recommended"] .category-menu-details summary {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-group[data-category="recommended"] .category-menu-details summary:hover,
+.menu-group[data-category="recommended"] .category-menu-details summary:focus-visible,
+.menu-group[data-category="recommended"] .category-menu-details[open] summary {
+  border-color: transparent;
+  color: var(--lacquer);
+  background: transparent;
+  box-shadow: none;
+}
+
 .category-dishes,
 .category-menu-details .harmony-card {
   margin-top: 24px;
