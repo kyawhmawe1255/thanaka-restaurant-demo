@@ -1079,38 +1079,43 @@ p {
 
 @media (min-width: 981px) {
   .atmosphere-section .section-title {
-    max-width: 1040px;
+    max-width: 980px;
     margin-inline: auto;
-    margin-bottom: clamp(42px, 5vw, 70px);
+    margin-bottom: clamp(34px, 4vw, 54px);
   }
 
   .atmosphere-section .section-title h2 {
-    font-size: clamp(3.6rem, 5.2vw, 5.8rem);
-    line-height: 0.98;
+    font-size: clamp(3.2rem, 4.6vw, 5rem);
+    line-height: 1;
   }
 
   .atmosphere-layout {
-    max-width: 1240px;
+    max-width: 980px;
     margin-inline: auto;
-    grid-template-columns: minmax(320px, 0.7fr) minmax(0, 1fr);
-    gap: clamp(40px, 5vw, 72px);
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: clamp(22px, 3vw, 34px);
+    align-items: start;
   }
 
   .atmosphere-note,
+  .atmosphere-photo,
   .atmosphere-photo.wide {
-    grid-column: auto;
+    grid-column: 1 / -1;
+    grid-row: auto;
   }
 
   .atmosphere-note {
-    max-width: 520px;
-    margin: 0;
+    max-width: 720px;
+    margin: clamp(10px, 2vw, 18px) 0 0;
   }
 
   .atmosphere-photo {
     min-height: 0;
     border-radius: 18px;
     width: 100%;
+    max-width: 920px;
+    justify-self: center;
+    aspect-ratio: 16 / 10;
   }
 
   .atmosphere-photo.wide {
@@ -1119,36 +1124,13 @@ p {
 
   .atmosphere-photo:not(.wide) {
     grid-column: 1 / -1;
-    max-width: 760px;
+    max-width: 920px;
     justify-self: center;
     aspect-ratio: 16 / 10;
   }
 
   .garden-path-photo {
     display: none;
-  }
-
-  .outdoor-note {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .outdoor-dining-photo {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .indoor-dining-photo {
-    grid-column: 1;
-    grid-row: 2;
-    max-width: none;
-    justify-self: stretch;
-    aspect-ratio: 16 / 10;
-  }
-
-  .indoor-note {
-    grid-column: 2;
-    grid-row: 2;
   }
 
   .atmosphere-photo img {
