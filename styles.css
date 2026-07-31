@@ -1363,7 +1363,7 @@ footer {
   gap: 18px;
   padding: 34px clamp(18px, 5vw, 72px);
   border-top: 1px solid var(--line);
-  color: #F4C542;
+  color: var(--soft-ink);
   background: var(--paper);
   font-family: "Courier New", monospace;
   font-size: clamp(0.94rem, 1.35vw, 1.15rem);
@@ -1373,7 +1373,7 @@ footer {
 }
 
 footer span:first-child {
-  color: #F4C542;
+  color: var(--soft-ink);
   text-transform: uppercase;
 }
 
