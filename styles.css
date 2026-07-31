@@ -882,6 +882,12 @@ p {
     var(--paper);
 }
 
+.atmosphere-section .section-title h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
 .atmosphere-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.65fr);
@@ -1085,8 +1091,8 @@ p {
   }
 
   .atmosphere-section .section-title h2 {
-    font-size: clamp(3.2rem, 4.6vw, 5rem);
-    line-height: 1;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.05;
   }
 
   .atmosphere-layout {
@@ -1127,10 +1133,6 @@ p {
     max-width: 920px;
     justify-self: center;
     aspect-ratio: 16 / 10;
-  }
-
-  .garden-path-photo {
-    display: none;
   }
 
   .atmosphere-photo img {
