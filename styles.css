@@ -995,8 +995,18 @@ p {
 }
 
 .reviews-head h2 {
-  font-size: clamp(2.25rem, 4.8vw, 4.6rem);
-  line-height: 1;
+  max-width: 780px;
+  font-size: clamp(2.1rem, 4.2vw, 4rem);
+  line-height: 1.04;
+}
+
+.review-trust {
+  margin: 18px 0 0;
+  color: var(--soft-ink);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: clamp(1rem, 1.45vw, 1.22rem);
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .rating-summary {
@@ -1026,25 +1036,39 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 10px 14px;
+  gap: 10px 16px;
   color: var(--soft-ink);
-  font-family: "Courier New", monospace;
+  font-family: Manrope, system-ui, sans-serif;
 }
 
 .review-feature-rating strong {
-  color: var(--gold);
-  font-family: "Courier New", monospace;
-  font-size: clamp(1.8rem, 4vw, 2.45rem);
-  font-weight: 400;
+  color: #c99626;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.15rem, 4.6vw, 3.2rem);
+  font-weight: 700;
   line-height: 1;
 }
 
 .review-feature-rating small {
-  flex-basis: 100%;
   color: var(--soft-ink);
-  font-family: "Courier New", monospace;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  font-weight: 400;
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  font-weight: 700;
+}
+
+.review-feature-rating .stars {
+  color: #f5a719;
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  letter-spacing: 0.07em;
+  line-height: 1;
+  text-shadow: 0 4px 16px rgba(245, 167, 25, 0.28);
+}
+
+.review-feature-rating .review-divider {
+  color: rgba(62, 42, 32, 0.5);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .review-feature-line {
@@ -1055,18 +1079,21 @@ p {
 
 .review-feature-card blockquote {
   margin: 0;
-  color: var(--leaf);
-  font-family: "Courier New", monospace;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  line-height: 1.45;
+  color: var(--soft-ink);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1.55vw, 1.28rem);
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0;
 }
 
 .review-feature-byline,
 .review-feature-link {
   margin: 0;
   color: var(--soft-ink);
-  font-family: "Courier New", monospace;
-  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  font-weight: 600;
 }
 
 .review-feature-link {
@@ -1149,8 +1176,8 @@ p {
   }
 
   .reviews-head h2 {
-    max-width: 480px;
-    font-size: clamp(2.8rem, 4vw, 4.1rem);
+    max-width: 600px;
+    font-size: clamp(2.6rem, 3.7vw, 3.8rem);
   }
 
   .rating-summary.review-feature-card {
@@ -1164,7 +1191,7 @@ p {
   }
 
   .review-feature-card blockquote {
-    font-size: clamp(1.12rem, 1.65vw, 1.45rem);
+    font-size: clamp(1.08rem, 1.35vw, 1.24rem);
     line-height: 1.55;
   }
 }
