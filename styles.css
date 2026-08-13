@@ -426,6 +426,40 @@ p {
 .menu-group[data-category="drinks"] {
   order: 8;
 }
+/* Drinks menu */
+
+.menu-group[data-category="drinks"] .category-copy {
+  width: 100%;
+}
+
+.drink-menu {
+  width: 100%;
+  display: grid;
+  gap: 52px;
+  padding: 24px 0 10px;
+}
+
+.drink-group {
+  display: grid;
+  gap: 14px;
+}
+
+.drink-group h4 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: Manrope, system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.drink-group p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
+}
 
 .menu-group h3 {
   grid-column: 1 / -1;
