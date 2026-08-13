@@ -173,7 +173,7 @@ rows.forEach((row) => {
   if (image && !row.classList.contains("no-thumb")) {
     const action = document.createElement("span");
     action.className = "row-action";
-    action.textContent = "SEE DISH→";
+    action.textContent = "EXPLORE DISH →";
     rowContent?.append(action);
   }
 });
