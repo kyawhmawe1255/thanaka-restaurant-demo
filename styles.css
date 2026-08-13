@@ -3163,10 +3163,12 @@ h1 {
     font-size: clamp(1.8rem, 11vw, 2.45rem);
   }
 
-  .menu-category-price {
+ .menu-category-price {
+  display: block;
   width: 100%;
+  grid-column: 1 / -1;
   margin: 24px 0 5px;
-  text-align: center;
+  text-align: center !important;
   color: var(--lacquer);
   font-size: 1rem;
   font-weight: 800;
